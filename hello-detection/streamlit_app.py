@@ -25,7 +25,7 @@ conf_threshold = float(st.sidebar.slider("Select the Confidence Threshold", 10, 
 # *****************************************************************************
 # OpenVINO AI 모델 불러 로딩
 core = ov.Core()
-model = core.read_model(model="/model/horizontal-text-detection-0001.xml")
+model = core.read_model(model="model/horizontal-text-detection-0001.xml")
 compiled_model = core.compile_model(model = model, device_name="CPU")
 input_layer = compiled_model.input(0)
 output_layer = compiled_model.output("boxes")
