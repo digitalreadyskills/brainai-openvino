@@ -98,7 +98,7 @@ if source_radio == "IMAGE":
         st.image(result_image, channels = "RGB")
         st.markdown(f"<h4 style='color: blue;'><strong>The result of running the AI inference on an image.</strong></h4>", unsafe_allow_html=True)
     else: 
-        st.image("data/intel_rnb.jpg")
+        st.image("./hello-detection/data/intel_rnb.jpg")
         st.write("Click on 'Browse Files' in the sidebar to run inference on an image." )
 
 # VIDEO 선택시
@@ -149,7 +149,7 @@ if source_radio == "VIDEO":
     if temporary_location is not None:
         play_video(temporary_location)
     else:
-        st.video("data/sample_video.mp4")
+        st.video("./hello-detection/data/sample_video.mp4")
         st.write("Click on 'Browse Files' in the sidebar to run inference on a video.")
         
 # WEBCAM 선택시
